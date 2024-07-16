@@ -4,9 +4,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 // service 是业务
 import { AppService } from './app.service';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [],
+  imports: [UserModule],
   controllers: [AppController],
   // https://docs.nestjs.cn/9/providers?id=providers
   providers: [AppService],
