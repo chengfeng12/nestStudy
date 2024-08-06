@@ -12,20 +12,20 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Post()
+  @Post('create')
   create(@Body() createUserDto: CreateUserDto) {
     return this.userService.create(createUserDto);
   }
 
   // @Version('1')
-  @Get()
+  @Get('findAll')
   findAll() {
     return this.userService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string, @Headers() headers) {
-    console.log(headers, id);
+    console.log(headers, id, '2222');
     return this.userService.findOne(+id);
   }
 
