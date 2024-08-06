@@ -12,7 +12,8 @@ export class HttpError implements ExceptionFilter {
       sucess: false,
       time: new Date(),
       data: exception.message,
-      path: request.url
+      path: request.url,
+      code: status
     })
   }
 }
