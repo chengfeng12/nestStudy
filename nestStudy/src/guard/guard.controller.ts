@@ -6,7 +6,7 @@ import { RoleGuard } from '../role/role.guard';
 import { Role, ReqUrl } from '../role/role.decorator';
 import { ApiOperation, ApiTags, ApiParam, ApiQuery, ApiResponse, ApiBearerAuth } from '@nestjs/swagger'
 
-@ApiBearerAuth()
+@ApiBearerAuth() 
 @ApiTags("守卫接口")
 @Controller('guard')
 @UseGuards(RoleGuard) // 局部守卫
