@@ -10,7 +10,7 @@ export class UploadController {
   constructor(private readonly uploadService: UploadService) { }
 
   @Post('album')
-  // FileInterceptor 单个上传 file 制定上传的key
+  // FileInterceptor 单个上传 file 自定上传的key
   @UseInterceptors(FileInterceptor('file'))
   upload(@UploadedFile() file) {
     console.log(file, 'file');
