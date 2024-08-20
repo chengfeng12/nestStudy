@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import Layout from '@/components/Loayout/index.vue'
 </script>
 
 <template>
-  <RouterView />
+  <a-config-provider
+    :theme="{
+      token: {
+        colorPrimary: '#00b96b'
+      }
+    }"
+  >
+    <Layout></Layout>
+  </a-config-provider>
 </template>
-
-<style scoped>
-
-</style>
+<style scoped></style>

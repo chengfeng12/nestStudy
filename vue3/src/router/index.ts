@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { h } from 'vue'
+import {
+  PieChartOutlined,
+  MailOutlined,
+  DesktopOutlined,
+  InboxOutlined,
+  AppstoreOutlined
+} from '@/Icons/index'
+import HomeView from '@/views/HomeView.vue'
+import js from '@/router/modules/js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,13 +16,22 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      meta: {
+        title: '首页',
+        icon: () => h(MailOutlined),
+      },
       component: HomeView
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
-    }
+      meta: {
+        title: '关于我',
+        icon: () => h(PieChartOutlined),
+      },
+      component: () => import('@/views/AboutView.vue')
+    },
+    ...js
   ]
 })
 
