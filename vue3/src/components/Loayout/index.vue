@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="Layout">
 import { ref } from 'vue'
 import SideBar from '@/components/Loayout/SideBar.vue'
 import { RouterLink, RouterView } from 'vue-router'

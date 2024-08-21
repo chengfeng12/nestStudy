@@ -15,7 +15,7 @@
     ></a-menu>
   </div>
 </template>
-<script lang="ts" setup>
+<script lang="ts" setup name="SideBar">
 import { reactive, watch, h } from 'vue'
 import { useSidebarRoutes } from './sidebar'
 import { useRouter } from 'vue-router'
@@ -55,6 +55,7 @@ const toggleCollapsed = () => {
 
 const clickMenu = ({ key }: { key: string }) => {
   state.selectedKeys = [key]
+  state.openKeys = [key]
   router.push({
     path: key
   })

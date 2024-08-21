@@ -1,5 +1,3 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -12,7 +10,6 @@ import 'virtual:uno.css'
 // 引入 Antd
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
-
 const app = createApp(App)
 
 app.use(createPinia())

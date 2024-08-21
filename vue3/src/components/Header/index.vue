@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="Header">
 import { ref, defineProps } from 'vue'
 const props = defineProps({
   title: {

@@ -13,4 +13,9 @@ import Layout from '@/components/Loayout/index.vue'
     <Layout></Layout>
   </a-config-provider>
 </template>
-<style scoped></style>
+
+<style lang="scss" type="text/scss" scoped>
+@import "@/assets/styles/index.scss";
+</style>
+
+

@@ -9,6 +9,7 @@ import {
 } from '@/Icons/index'
 import HomeView from '@/views/HomeView.vue'
 import js from '@/router/modules/js'
+import html from '@/router/modules/html'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +32,7 @@ const router = createRouter({
       },
       component: () => import('@/views/AboutView.vue')
     },
+    ...html,
     ...js
   ]
 })
