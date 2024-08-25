@@ -23,7 +23,17 @@ const jsRouters: RouteRecordRaw[] = [
           icon: () => h(PieChartOutlined),
         },
         component: () => import('@/views/js/evelStringCode/index.vue'),
-      }
+      },
+      {
+        path: '/virtuallyList',
+        name: 'virtuallyList',
+        meta: {
+          title: '虚拟列表',
+          icon: () => h(PieChartOutlined),
+        },
+        component: () => import('@/views/js/virtuallyList/index.vue'),
+      },
+      
     ]
   }
 ];
