@@ -112,7 +112,6 @@ onMounted(() => {
     viewEl: viewContent,
     scrollbarEl: scrollbar
   })
-
   viewContent.addEventListener('scroll', (e) => {
     let offSet = (e.target as HTMLElement).scrollTop
     scrollInstance.updateView(offSet)
@@ -148,9 +147,11 @@ onBeforeUnmount(() => {
   left: 0;
   top: 0;
 }
-.list-row {
-  height: var(--rowHeight);
-  padding: 0 20px;
-  color: #fff;
+::v-deep {
+  .list-row {
+    height: var(--rowHeight);
+    padding: 0 20px;
+    color: #fff;
+  }
 }
 </style>
