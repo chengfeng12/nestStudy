@@ -10,6 +10,7 @@ import {
 import HomeView from '@/views/HomeView.vue'
 import js from '@/router/modules/js'
 import html from '@/router/modules/html'
+import css from '@/router/modules/css'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,7 @@ const router = createRouter({
       component: () => import('@/views/AboutView.vue')
     },
     ...html,
+    ...css,
     ...js
   ]
 })
